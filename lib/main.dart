@@ -1,3 +1,4 @@
+import 'package:crosstech_trainning/screen/learning_2.dart';
 import 'package:crosstech_trainning/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      home: const AScreen(),
     );
   }
 }
