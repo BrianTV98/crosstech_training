@@ -24,7 +24,7 @@ Future<void> main() async {
 
 Future<bool> _initApp() async {
   try{
-    print('ho duy khang')
+    print('A HIEU')
   }
   catch(e){
      print('errr')
