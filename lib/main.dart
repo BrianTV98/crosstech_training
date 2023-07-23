@@ -23,5 +23,11 @@ Future<void> main() async {
 }
 
 Future<bool> _initApp() async {
+  try{
+    print('ho duy khang')
+  }
+  catch(e){
+     print('errr')
+  }
   return true;
 }
