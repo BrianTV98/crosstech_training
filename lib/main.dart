@@ -26,6 +26,8 @@ Future<bool> _initApp() async {
   try{
     print('A HIEU');
     print("Nguyen Vu Anh  lan 02");
+     print("Nguyen Vu Anh  lan 03");
+
 
   }
   catch(e){
