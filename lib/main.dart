@@ -23,12 +23,12 @@ Future<void> main() async {
 }
 
 Future<bool> _initApp() async {
-  try{
+  try {
     print('A HIEU');
     print("Nguyen Vu Anh");
-  }
-  catch(e){
-     print('errr');
+    print("khangho");
+  } catch (e) {
+    print('errr');
   }
   return true;
 }
