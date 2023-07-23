@@ -23,14 +23,5 @@ Future<void> main() async {
 }
 
 Future<bool> _initApp() async {
-  try {
-    final bool appInit = await AppDependencies.appInit();
-    if (!appInit) {
-      return false;
-    }
-  } catch (ex) {
-    LoggerUtils.e('cross_tech: ${ex.toString()}');
-    return false;
-  }
   return true;
 }
