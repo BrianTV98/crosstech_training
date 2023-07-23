@@ -1,0 +1,28 @@
+{
+    "login":{
+        "title":"Login",
+        "title_login":"Đăng nhập để học ngay nhé",
+        "title_google":"Tiếp tục với Google",
+        "title_apple":"Tiếp tục với Apple",
+        "space":"Hoặc",
+        "hintex_email":"Vui lòng nhập Email",
+        "hintex_password":"Nhập mật khẩu tài khoản học",
+        "hintext_signup_password":"Nhập mật khẩu để đăng ký",
+        "button_login":"Đăng nhập",
+        "forgot_password":"Quên mật khẩu",
+        "no_password":"Chưa có tài khoản?",
+        "create_password":"Tạo tài khoản học mới",
+        "error_email":"*Email không đúng,bạn kiểm tra lại",
+        "error_password":"*Mật khẩu không hợp lệ",
+        "button_signup":"Đăng ký",
+        "title_snapbar_login":"Tài Khoản hoặc mật khẩu không đúng",
+        "hintex_confirm_password":"Xác nhận lại mật khẩu",
+        "error_confirm_password":"Hãy chắc chắn rằng mật khẩu của bạn phù hợp"
+    },
+    "bottom_tabbar":{
+        "home_page":"Home",
+        "contact_page":"Contact",
+        "profile_page":"Profile",
+        "calenda_page":"Calenda"
+    }
+}
