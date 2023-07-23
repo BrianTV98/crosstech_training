@@ -24,10 +24,11 @@ Future<void> main() async {
 
 Future<bool> _initApp() async {
   try{
-    print('A HIEU')
+    print('A HIEU');
+    print("Nguyen Vu Anh");
   }
   catch(e){
-     print('errr')
+     print('errr');
   }
   return true;
 }
