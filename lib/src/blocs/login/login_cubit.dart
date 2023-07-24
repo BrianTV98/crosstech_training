@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../../commonts/base_cubit.dart';
@@ -70,6 +71,22 @@ class LoginCubit extends BaseCubit<LoginState> {
     }
   }
 
+  Future<UserCredential?> signInWithGoogle() async {
+    try {
+      emit(const LoginState.loading());
+      final GoogleSignInAccount? getUser = await GoogleSignIn().signIn();
+      final GoogleSignInAuthentication getAuthen =
+          await getUser!.authentication;
+      final credential = GoogleAuthProvider.credential(
+          accessToken: getAuthen.accessToken, idToken: getAuthen.idToken);
+      await FirebaseAuth.instance.signInWithCredential(credential);
+      emit(const LoginState.success());
+    } catch (e) {
+      emit(LoginState.error(massege: tr('login.error_email')));
+    }
+    return null;
+  }
+
   Future<void> signInWithApple() async {
     try {
       emit(const LoginState.loading());
@@ -108,18 +125,19 @@ class LoginCubit extends BaseCubit<LoginState> {
     }
   }
 
-  Future<String?> resetPassword() async {
+  Future<void> resetPassword() async {
     try {
       emit(const LoginState.loading());
       if (StringHelper.isEmail(_email)) {
         await auth.sendPasswordResetEmail(
           email: _email.trim(),
         );
-        emit(const LoginState.success());
+        emit(const LoginState.fogotPassword());
+      } else {
+        emit(LoginState.error(massege: tr('login.error_email')));
       }
     } catch (e) {
       emit(LoginState.error(massege: tr('login.error_email')));
     }
-    return null;
   }
 }

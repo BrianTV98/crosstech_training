@@ -9,7 +9,10 @@ import '../blocs/login/login_cubit.dart';
 import '../blocs/login/login_state.dart';
 import '../constances/assets_path.dart';
 import '../routes/app_router.dart';
+import '../routes/app_router.dart';
 import '../widgets/chose_login.dart';
+import '../widgets/custom_showdailog.dart';
+import '../widgets/forget_password.dart';
 import '../widgets/text_form_field_login.dart';
 
 @RoutePage()
@@ -45,6 +48,9 @@ class _LoginPageState extends State<LoginPage> {
       child: BlocListener(
         bloc: bloc,
         listener: (context, state) {
+          if (state is LoginStateLoading) {
+            const CircularProgressIndicator();
+          }
           if (state is LoginStateSuccess) {
             AutoRouter.of(context).push(const MainPageRoute());
           } else if (state is LoginStateError) {
@@ -56,6 +62,23 @@ class _LoginPageState extends State<LoginPage> {
                   style: const TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
+            );
+          }
+          if (state is LoginStateFogotPassword) {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return CustomDialog(
+                  message: tr('forgot_password.title_aler'),
+                  onConfirm: () async {
+                    AutoRouter.of(context).push(const LoginPageRoute());
+                  },
+                  onCancel: () {
+                    // Handle the cancel action here
+                    Navigator.of(context).pop(); // Close the dialog
+                  },
+                );
+              },
             );
           }
         },
@@ -125,13 +148,8 @@ class _LoginPageState extends State<LoginPage> {
                                     height: 25,
                                   ),
                                   ChoseLogin(
-                                    ontap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                SignUpPage(bloc: bloc)),
-                                      );
+                                    ontap: () async {
+                                      await bloc.signInWithGoogle();
                                     },
                                     color: Colors.red,
                                     width:
@@ -207,12 +225,22 @@ class _LoginPageState extends State<LoginPage> {
                                     },
                                   ),
                                   const SizedBox(height: 30),
-                                  Text(
-                                    tr('login.forgot_password'),
-                                    style: const TextStyle(
-                                      color: Colors.blue,
-                                      fontSize: 17,
-                                      decoration: TextDecoration.underline,
+                                  GestureDetector(
+                                    onTap: () async {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ForgotPassword(bloc: bloc)),
+                                      );
+                                    },
+                                    child: Text(
+                                      tr('login.forgot_password'),
+                                      style: const TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 17,
+                                        decoration: TextDecoration.underline,
+                                      ),
                                     ),
                                   ),
                                   const SizedBox(height: 40),
@@ -227,12 +255,23 @@ class _LoginPageState extends State<LoginPage> {
                                         ),
                                       ),
                                       const SizedBox(width: 5),
-                                      Text(
-                                        tr('login.create_password'),
-                                        style: const TextStyle(
-                                          color: Colors.blue,
-                                          fontSize: 15,
-                                          decoration: TextDecoration.underline,
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    SignUpPage(bloc: bloc)),
+                                          );
+                                        },
+                                        child: Text(
+                                          tr('login.create_password'),
+                                          style: const TextStyle(
+                                            color: Colors.blue,
+                                            fontSize: 15,
+                                            decoration:
+                                                TextDecoration.underline,
+                                          ),
                                         ),
                                       ),
                                     ],

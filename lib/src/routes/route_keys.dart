@@ -10,4 +10,5 @@ class RouteKey {
   static const String profilePage = 'profilePage';
   static const String contactPage = 'contactPage';
   static const String calendaPage = 'calendaPage';
+  static const String fogotpassword = 'fogotPassword';
 }
