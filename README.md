@@ -33,3 +33,14 @@ OR
 
 
 ## Continue Deploy: firebase distribute 
+
+Android:- Development
+step 1: 
+run terminal 
+```
+   ./distribute.sh
+```
+
+- select 1:
+- select 1:
+- type change content:
