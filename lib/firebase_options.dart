@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCYc0l5QxNwRpDffrH5iAJ7OEcFHYwa86o',
-    appId: '1:176379158713:android:26108f560620ed51ae3b68',
+    appId: '1:176379158713:android:daecc9838fe00d08ae3b68',
     messagingSenderId: '176379158713',
     projectId: 'kampvie-61f4d',
     storageBucket: 'kampvie-61f4d.appspot.com',

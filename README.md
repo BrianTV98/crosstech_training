@@ -30,3 +30,6 @@ OR
 ```
     flutter packages pub run build_runner build --build-filter="lib/123/**"
 ```
+
+
+## Continue Deploy: firebase distribute 

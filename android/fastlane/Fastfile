@@ -1,0 +1,33 @@
+fastlane_require 'dotenv'
+default_platform(:android)
+
+platform :android do
+
+### ============================================================
+### BEGIN OF Firebase App Distribution Combined
+###
+lane :firebase_distribution do |options|
+	LATEST_RELEASE = firebase_app_distribution_get_latest_release(
+		app: ENV['FIREBASE_APP_DISTRIBUTION_APP'], 
+		firebase_cli_token: ENV['FIREBASE_CLI_TOKEN'],
+	)
+
+	APP_BUILD_VERSION = LATEST_RELEASE[:displayVersion].to_s
+    APP_BUILD_NUMBER = LATEST_RELEASE[:buildVersion].to_i
+	PUBLISHED_BUILD_NUMBER = (APP_BUILD_NUMBER.to_i + 1).to_i
+	
+	sh("flutter build apk -t lib/main.dart --release --build-number #{PUBLISHED_BUILD_NUMBER.to_s}")
+	
+	UPLOADED_BUILD = firebase_app_distribution(
+		app: ENV['FIREBASE_APP_DISTRIBUTION_APP'],
+		firebase_cli_token: ENV['FIREBASE_CLI_TOKEN'],
+		android_artifact_type: 'APK',
+		android_artifact_path: options[:dev_path] + ENV['APK_PATH'],
+		groups: ENV['FIREBASE_APP_DISTRIBUTION_GROUPS'],
+		release_notes: options[:change_log]
+	)
+
+	PUBLISHED_BUILD_VERSION = UPLOADED_BUILD[:displayVersion].to_s
+
+end
+end
