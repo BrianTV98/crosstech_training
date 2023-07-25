@@ -49,27 +49,27 @@ dependencies:
   firebase_core_platform_interface: ^4.5.3
 
 flutter_launcher_icons:
-  image_path_android: "assets/images/infographic_571640.png"
-  image_path_ios: "assets/images/infographic_571640.png"
+  image_path_android: "assets/images/app_logo.jpeg"
+  image_path_ios: "assets/images/app_logo.jpeg"
   android: true 
   ios: true 
-  adaptive_icon_background: "assets/images/infographic_571640.png" 
-  adaptive_icon_foreground: "assets/images/infographic_571640.png" 
+  adaptive_icon_background: "assets/images/app_logo.jpeg"
+  adaptive_icon_foreground: "assets/images/app_logo.jpeg"
   min_sdk_android: 21 
   remove_alpha_ios: true
   background_color_ios: "#ffffff"
   web:
     generate: true
-    image_path: "assets/images/infographic_571640.png"
+    image_path: "assets/images/app_logo.jpeg"
     background_color: "#FFFFFF"  # Replace with your desired background color in #RRGGBB format
     theme_color: "#0000FF"  # Replace with your desired theme color in #RRGGBB format
   windows:
     generate: true
-    image_path: "assets/images/infographic_571640.png"
+    image_path: "assets/images/app_logo.jpeg"
     icon_size: 48 
   macos:
     generate: true
-    image_path: "assets/images/infographic_571640.png"
+    image_path: "assets/images/app_logo.jpeg"
 
 
 
