@@ -17,7 +17,8 @@
         "button_signup":"Đăng ký",
         "title_snapbar_login":"Tài Khoản hoặc mật khẩu không đúng",
         "hintex_confirm_password":"Xác nhận lại mật khẩu",
-        "error_confirm_password":"Hãy chắc chắn rằng mật khẩu của bạn phù hợp"
+        "error_confirm_password":"Hãy chắc chắn rằng mật khẩu của bạn phù hợp",
+        "title_facebook":"Tiếp tục với Facebook"
     },
     "bottom_tabbar":{
         "home_page":"Home",

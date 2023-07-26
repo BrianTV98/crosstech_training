@@ -69,6 +69,8 @@
 		A75A75EC8F720A8CF0C8D989 /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE29D046D6ABA7D1DFC4BB37 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0B94172A66860600EE3AC8 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		CA90F3082A70F77500683FFB /* RunnerDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RunnerDebug.entitlements; sourceTree = "<group>"; };
+		CA90F3092A7102CA00683FFB /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
 		E74CAD60FA4CC50F30F4791B /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				76ADDC712A7002CC0017DD8C /* Runner.entitlements */,
+				CA90F3092A7102CA00683FFB /* Runner.entitlements */,
+				CA90F3082A70F77500683FFB /* RunnerDebug.entitlements */,
 				CA0B94172A66860600EE3AC8 /* GoogleService-Info (1).plist */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
@@ -658,7 +662,11 @@
 				APP_NAME = Kampvie;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+<<<<<<< HEAD
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+=======
+				CODE_SIGN_ENTITLEMENTS = Runner/RunnerDebug.entitlements;
+>>>>>>> b5dd9c5 (update code)
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = UFX2BDG6TX;
 				ENABLE_BITCODE = NO;

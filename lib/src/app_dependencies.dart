@@ -4,6 +4,7 @@ import 'blocs/bloc_dependencies.dart';
 import 'model/model_dependencies.dart';
 import 'repositories/repository_dependencies.dart';
 import 'routes/app_router.dart';
+import 'services/services_dependencies.dart';
 
 class AppDependencies {
   static GetIt get injector => GetIt.I;
@@ -12,6 +13,7 @@ class AppDependencies {
     injector.registerFactory<AppRouter>(() => AppRouter());
     ModelDependencies.init(injector);
     RepositoriesDependencies.init(injector);
+    ServiceDependencies.init(injector);
     return true;
   }
 }

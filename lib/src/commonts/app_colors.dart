@@ -14,4 +14,5 @@ class AppColors {
   static const primaryMonoTints0 = Color(0xFFe8e8e8);
   static const primaryIconColor = Color(0xFFfcf4e4);
   static const primaryIconColor2 = Color(0xFF756D54);
+  static const iconFacebook = Color(0xFF33B2FF);
 }

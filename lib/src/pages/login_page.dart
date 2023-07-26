@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:cross_tech/src/commonts/app_colors.dart';
 import 'package:cross_tech/src/pages/signup_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../blocs/login/login_cubit.dart';
 import '../blocs/login/login_state.dart';
 import '../constances/assets_path.dart';
-import '../routes/app_router.dart';
 import '../routes/app_router.dart';
 import '../widgets/chose_login.dart';
 import '../widgets/custom_showdailog.dart';
@@ -112,7 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Stack(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(310, 10, 20, 10),
+                            padding: const EdgeInsets.fromLTRB(280, 10, 20, 10),
                             child: Container(
                               width: 30,
                               height: 30,
@@ -130,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 60, horizontal: 15),
+                                vertical: 35, horizontal: 15),
                             child: SingleChildScrollView(
                               child: Column(
                                 children: [
@@ -144,9 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                                         leadingDistribution:
                                             TextLeadingDistribution.even),
                                   ),
-                                  const SizedBox(
-                                    height: 25,
-                                  ),
+                                  const SizedBox(height: 20),
                                   ChoseLogin(
                                     ontap: () async {
                                       await bloc.signInWithGoogle();
@@ -159,13 +157,29 @@ class _LoginPageState extends State<LoginPage> {
                                     height:
                                         MediaQuery.of(context).size.height / 17,
                                   ),
-                                  const SizedBox(height: 25),
+                                  const SizedBox(height: 15),
                                   ChoseLogin(
+                                    ontap: () async {
+                                      await bloc.signInWithApple(context);
+                                    },
                                     color: Colors.black,
                                     width:
                                         MediaQuery.of(context).size.width / 1.4,
                                     textButtonLogin: tr('login.title_apple'),
                                     image: ImageAssetPath.imageApple,
+                                    height:
+                                        MediaQuery.of(context).size.height / 17,
+                                  ),
+                                  const SizedBox(height: 15),
+                                  ChoseLogin(
+                                    ontap: () async {
+                                      await bloc.signInWithApple(context);
+                                    },
+                                    color: AppColors.iconFacebook,
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.4,
+                                    textButtonLogin: tr('login.title_facebook'),
+                                    image: ImageAssetPath.facebook,
                                     height:
                                         MediaQuery.of(context).size.height / 17,
                                   ),
