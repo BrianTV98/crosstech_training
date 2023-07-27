@@ -13,8 +13,6 @@ class AppDependencies {
   static Future<bool> appInit() async {
     BlocDependencies.init(injector);
     injector.registerFactory<AppRouter>(() => AppRouter());
-    ModelDependencies.init(injector);
-    RepositoriesDependencies.init(injector);
     return true;
   }
 
@@ -22,7 +20,9 @@ class AppDependencies {
     final config = AppDependencies.injector.get<AppConfiguration>();
     injector.registerFactory<RestUtils>(
         () => RestUtils(config.baseUrlApi, interceptors: []));
-    ServiceDependencies.init(injector);
+    ServiceDependencies.init(injector, 'CrossTech');
+    ModelDependencies.init(injector);
+    RepositoriesDependencies.init(injector);
     return true;
   }
 }
