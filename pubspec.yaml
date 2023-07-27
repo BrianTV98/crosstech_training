@@ -49,6 +49,8 @@ dependencies:
   firebase_core_platform_interface: ^4.5.3
   the_apple_sign_in: ^1.1.1
   flutter_facebook_auth: ^6.0.0
+  global_configs: ^1.1.2
+  connectivity_plus: ^4.0.1
 
 flutter_launcher_icons:
   image_path_android: "assets/images/app_logo.jpeg"

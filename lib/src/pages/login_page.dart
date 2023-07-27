@@ -160,7 +160,7 @@ class _LoginPageState extends State<LoginPage> {
                                   const SizedBox(height: 15),
                                   ChoseLogin(
                                     ontap: () async {
-                                      await bloc.signInWithApple(context);
+                                      await bloc.signInWithApple();
                                     },
                                     color: Colors.black,
                                     width:
@@ -173,7 +173,7 @@ class _LoginPageState extends State<LoginPage> {
                                   const SizedBox(height: 15),
                                   ChoseLogin(
                                     ontap: () async {
-                                      await bloc.signInWithApple(context);
+                                      await bloc.signInWithApple();
                                     },
                                     color: AppColors.iconFacebook,
                                     width:
