@@ -21,6 +21,7 @@ mixin _$LoginState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
+    required TResult Function() fogotPassword,
     required TResult Function(String massege) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,6 +30,7 @@ mixin _$LoginState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
+    TResult? Function()? fogotPassword,
     TResult? Function(String massege)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +39,7 @@ mixin _$LoginState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
+    TResult Function()? fogotPassword,
     TResult Function(String massege)? error,
     required TResult orElse(),
   }) =>
@@ -46,6 +49,7 @@ mixin _$LoginState {
     required TResult Function(LoginStateInitial value) initial,
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateSuccess value) success,
+    required TResult Function(LoginStateFogotPassword value) fogotPassword,
     required TResult Function(LoginStateError value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +58,7 @@ mixin _$LoginState {
     TResult? Function(LoginStateInitial value)? initial,
     TResult? Function(LoginStateLoading value)? loading,
     TResult? Function(LoginStateSuccess value)? success,
+    TResult? Function(LoginStateFogotPassword value)? fogotPassword,
     TResult? Function(LoginStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +67,7 @@ mixin _$LoginState {
     TResult Function(LoginStateInitial value)? initial,
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateSuccess value)? success,
+    TResult Function(LoginStateFogotPassword value)? fogotPassword,
     TResult Function(LoginStateError value)? error,
     required TResult orElse(),
   }) =>
@@ -127,6 +133,7 @@ class _$LoginStateInitial implements LoginStateInitial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
+    required TResult Function() fogotPassword,
     required TResult Function(String massege) error,
   }) {
     return initial();
@@ -138,6 +145,7 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
+    TResult? Function()? fogotPassword,
     TResult? Function(String massege)? error,
   }) {
     return initial?.call();
@@ -149,6 +157,7 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
+    TResult Function()? fogotPassword,
     TResult Function(String massege)? error,
     required TResult orElse(),
   }) {
@@ -164,6 +173,7 @@ class _$LoginStateInitial implements LoginStateInitial {
     required TResult Function(LoginStateInitial value) initial,
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateSuccess value) success,
+    required TResult Function(LoginStateFogotPassword value) fogotPassword,
     required TResult Function(LoginStateError value) error,
   }) {
     return initial(this);
@@ -175,6 +185,7 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult? Function(LoginStateInitial value)? initial,
     TResult? Function(LoginStateLoading value)? loading,
     TResult? Function(LoginStateSuccess value)? success,
+    TResult? Function(LoginStateFogotPassword value)? fogotPassword,
     TResult? Function(LoginStateError value)? error,
   }) {
     return initial?.call(this);
@@ -186,6 +197,7 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult Function(LoginStateInitial value)? initial,
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateSuccess value)? success,
+    TResult Function(LoginStateFogotPassword value)? fogotPassword,
     TResult Function(LoginStateError value)? error,
     required TResult orElse(),
   }) {
@@ -241,6 +253,7 @@ class _$LoginStateLoading implements LoginStateLoading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
+    required TResult Function() fogotPassword,
     required TResult Function(String massege) error,
   }) {
     return loading();
@@ -252,6 +265,7 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
+    TResult? Function()? fogotPassword,
     TResult? Function(String massege)? error,
   }) {
     return loading?.call();
@@ -263,6 +277,7 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
+    TResult Function()? fogotPassword,
     TResult Function(String massege)? error,
     required TResult orElse(),
   }) {
@@ -278,6 +293,7 @@ class _$LoginStateLoading implements LoginStateLoading {
     required TResult Function(LoginStateInitial value) initial,
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateSuccess value) success,
+    required TResult Function(LoginStateFogotPassword value) fogotPassword,
     required TResult Function(LoginStateError value) error,
   }) {
     return loading(this);
@@ -289,6 +305,7 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult? Function(LoginStateInitial value)? initial,
     TResult? Function(LoginStateLoading value)? loading,
     TResult? Function(LoginStateSuccess value)? success,
+    TResult? Function(LoginStateFogotPassword value)? fogotPassword,
     TResult? Function(LoginStateError value)? error,
   }) {
     return loading?.call(this);
@@ -300,6 +317,7 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult Function(LoginStateInitial value)? initial,
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateSuccess value)? success,
+    TResult Function(LoginStateFogotPassword value)? fogotPassword,
     TResult Function(LoginStateError value)? error,
     required TResult orElse(),
   }) {
@@ -355,6 +373,7 @@ class _$LoginStateSuccess implements LoginStateSuccess {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
+    required TResult Function() fogotPassword,
     required TResult Function(String massege) error,
   }) {
     return success();
@@ -366,6 +385,7 @@ class _$LoginStateSuccess implements LoginStateSuccess {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
+    TResult? Function()? fogotPassword,
     TResult? Function(String massege)? error,
   }) {
     return success?.call();
@@ -377,6 +397,7 @@ class _$LoginStateSuccess implements LoginStateSuccess {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
+    TResult Function()? fogotPassword,
     TResult Function(String massege)? error,
     required TResult orElse(),
   }) {
@@ -392,6 +413,7 @@ class _$LoginStateSuccess implements LoginStateSuccess {
     required TResult Function(LoginStateInitial value) initial,
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateSuccess value) success,
+    required TResult Function(LoginStateFogotPassword value) fogotPassword,
     required TResult Function(LoginStateError value) error,
   }) {
     return success(this);
@@ -403,6 +425,7 @@ class _$LoginStateSuccess implements LoginStateSuccess {
     TResult? Function(LoginStateInitial value)? initial,
     TResult? Function(LoginStateLoading value)? loading,
     TResult? Function(LoginStateSuccess value)? success,
+    TResult? Function(LoginStateFogotPassword value)? fogotPassword,
     TResult? Function(LoginStateError value)? error,
   }) {
     return success?.call(this);
@@ -414,6 +437,7 @@ class _$LoginStateSuccess implements LoginStateSuccess {
     TResult Function(LoginStateInitial value)? initial,
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateSuccess value)? success,
+    TResult Function(LoginStateFogotPassword value)? fogotPassword,
     TResult Function(LoginStateError value)? error,
     required TResult orElse(),
   }) {
@@ -426,6 +450,127 @@ class _$LoginStateSuccess implements LoginStateSuccess {
 
 abstract class LoginStateSuccess implements LoginState {
   const factory LoginStateSuccess() = _$LoginStateSuccess;
+}
+
+/// @nodoc
+abstract class _$$LoginStateFogotPasswordCopyWith<$Res> {
+  factory _$$LoginStateFogotPasswordCopyWith(_$LoginStateFogotPassword value,
+          $Res Function(_$LoginStateFogotPassword) then) =
+      __$$LoginStateFogotPasswordCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoginStateFogotPasswordCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$LoginStateFogotPassword>
+    implements _$$LoginStateFogotPasswordCopyWith<$Res> {
+  __$$LoginStateFogotPasswordCopyWithImpl(_$LoginStateFogotPassword _value,
+      $Res Function(_$LoginStateFogotPassword) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoginStateFogotPassword implements LoginStateFogotPassword {
+  const _$LoginStateFogotPassword();
+
+  @override
+  String toString() {
+    return 'LoginState.fogotPassword()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoginStateFogotPassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() success,
+    required TResult Function() fogotPassword,
+    required TResult Function(String massege) error,
+  }) {
+    return fogotPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? success,
+    TResult? Function()? fogotPassword,
+    TResult? Function(String massege)? error,
+  }) {
+    return fogotPassword?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? success,
+    TResult Function()? fogotPassword,
+    TResult Function(String massege)? error,
+    required TResult orElse(),
+  }) {
+    if (fogotPassword != null) {
+      return fogotPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginStateInitial value) initial,
+    required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateSuccess value) success,
+    required TResult Function(LoginStateFogotPassword value) fogotPassword,
+    required TResult Function(LoginStateError value) error,
+  }) {
+    return fogotPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginStateInitial value)? initial,
+    TResult? Function(LoginStateLoading value)? loading,
+    TResult? Function(LoginStateSuccess value)? success,
+    TResult? Function(LoginStateFogotPassword value)? fogotPassword,
+    TResult? Function(LoginStateError value)? error,
+  }) {
+    return fogotPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginStateInitial value)? initial,
+    TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateSuccess value)? success,
+    TResult Function(LoginStateFogotPassword value)? fogotPassword,
+    TResult Function(LoginStateError value)? error,
+    required TResult orElse(),
+  }) {
+    if (fogotPassword != null) {
+      return fogotPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginStateFogotPassword implements LoginState {
+  const factory LoginStateFogotPassword() = _$LoginStateFogotPassword;
 }
 
 /// @nodoc
@@ -495,6 +640,7 @@ class _$LoginStateError implements LoginStateError {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() success,
+    required TResult Function() fogotPassword,
     required TResult Function(String massege) error,
   }) {
     return error(massege);
@@ -506,6 +652,7 @@ class _$LoginStateError implements LoginStateError {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? success,
+    TResult? Function()? fogotPassword,
     TResult? Function(String massege)? error,
   }) {
     return error?.call(massege);
@@ -517,6 +664,7 @@ class _$LoginStateError implements LoginStateError {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? success,
+    TResult Function()? fogotPassword,
     TResult Function(String massege)? error,
     required TResult orElse(),
   }) {
@@ -532,6 +680,7 @@ class _$LoginStateError implements LoginStateError {
     required TResult Function(LoginStateInitial value) initial,
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateSuccess value) success,
+    required TResult Function(LoginStateFogotPassword value) fogotPassword,
     required TResult Function(LoginStateError value) error,
   }) {
     return error(this);
@@ -543,6 +692,7 @@ class _$LoginStateError implements LoginStateError {
     TResult? Function(LoginStateInitial value)? initial,
     TResult? Function(LoginStateLoading value)? loading,
     TResult? Function(LoginStateSuccess value)? success,
+    TResult? Function(LoginStateFogotPassword value)? fogotPassword,
     TResult? Function(LoginStateError value)? error,
   }) {
     return error?.call(this);
@@ -554,6 +704,7 @@ class _$LoginStateError implements LoginStateError {
     TResult Function(LoginStateInitial value)? initial,
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateSuccess value)? success,
+    TResult Function(LoginStateFogotPassword value)? fogotPassword,
     TResult Function(LoginStateError value)? error,
     required TResult orElse(),
   }) {

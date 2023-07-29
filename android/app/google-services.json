@@ -1,41 +1,76 @@
 {
   "project_info": {
-    "project_number": "914199632725",
-    "firebase_url": "https://crosstech-ef31d-default-rtdb.firebaseio.com",
-    "project_id": "crosstech-ef31d",
-    "storage_bucket": "crosstech-ef31d.appspot.com"
+    "project_number": "176379158713",
+    "project_id": "kampvie-61f4d",
+    "storage_bucket": "kampvie-61f4d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:914199632725:android:be981d19c04451fff66ddc",
+        "mobilesdk_app_id": "1:176379158713:android:26108f560620ed51ae3b68",
         "android_client_info": {
           "package_name": "com.example.cross_tech"
         }
       },
       "oauth_client": [
         {
-          "client_id": "914199632725-9jtomsr71mp85qhn6tfaufdaf44kmf2u.apps.googleusercontent.com",
+          "client_id": "176379158713-8g6cd4hgc4libsudpr734qpv2ur5sg5c.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDdoj93qCIy7SDVEyKUTjv_g4KwnVxeF9I"
+          "current_key": "AIzaSyCYc0l5QxNwRpDffrH5iAJ7OEcFHYwa86o"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "914199632725-60ri5qat84d2fgsc1gatvhppv04br5gh.apps.googleusercontent.com",
+              "client_id": "176379158713-8g6cd4hgc4libsudpr734qpv2ur5sg5c.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "914199632725-0hv4b1656ik13gc4l951qmrnvb21dfnf.apps.googleusercontent.com",
+              "client_id": "176379158713-hr2pcegt3vic3lucl7gtsd7502o5l7tv.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.crossTech"
+                "bundle_id": "com.kampvie.kampvie"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176379158713:android:daecc9838fe00d08ae3b68",
+        "android_client_info": {
+          "package_name": "com.kampvie.travel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176379158713-8g6cd4hgc4libsudpr734qpv2ur5sg5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYc0l5QxNwRpDffrH5iAJ7OEcFHYwa86o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176379158713-8g6cd4hgc4libsudpr734qpv2ur5sg5c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "176379158713-hr2pcegt3vic3lucl7gtsd7502o5l7tv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kampvie.kampvie"
               }
             }
           ]

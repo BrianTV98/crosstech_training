@@ -17,12 +17,20 @@
         "button_signup":"Đăng ký",
         "title_snapbar_login":"Tài Khoản hoặc mật khẩu không đúng",
         "hintex_confirm_password":"Xác nhận lại mật khẩu",
-        "error_confirm_password":"Hãy chắc chắn rằng mật khẩu của bạn phù hợp"
+        "error_confirm_password":"Hãy chắc chắn rằng mật khẩu của bạn phù hợp",
+        "title_facebook":"Tiếp tục với Facebook"
     },
     "bottom_tabbar":{
         "home_page":"Home",
         "contact_page":"Contact",
         "profile_page":"Profile",
         "calenda_page":"Calenda"
+    },
+    "forgot_password" :{
+        "title_email":"Vui lòng nhập email của bạn vào đây!",
+        "title_button":"Reset Password",
+        "title_aler":"Kiểm tra lại emai của bạn trong hợp thư đến",
+        "title_button_aler":"Xác Nhận",
+        "title_button_cancel":"Huỷ"
     }
 }

@@ -7,4 +7,6 @@ class ImageAssetPath {
   static const bottomContact = 'assets/images/bottom_contact.svg';
   static const bottomProfile = 'assets/images/bottom_profile.svg';
   static const bottomCalenda = 'assets/images/bottom_calenda.svg';
+  static const forgotPassword = 'assets/images/forgot-password.png';
+  static const facebook = 'assets/images/icon-facebook.png';
 }

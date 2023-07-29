@@ -1,10 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
-import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:the_apple_sign_in/scope.dart';
+import 'package:the_apple_sign_in/the_apple_sign_in.dart';
 
 import '../../commonts/base_cubit.dart';
 import '../../helpers/string_helper.dart';
+import '../../services/authen_service.dart';
 import 'login_state.dart';
 
 class LoginCubit extends BaseCubit<LoginState> {
@@ -70,56 +73,64 @@ class LoginCubit extends BaseCubit<LoginState> {
     }
   }
 
-  Future<void> signInWithApple() async {
+  Future<UserCredential?> signInWithGoogle() async {
     try {
       emit(const LoginState.loading());
-      final credential = await SignInWithApple.getAppleIDCredential(
-        scopes: [
-          AppleIDAuthorizationScopes.email,
-          AppleIDAuthorizationScopes.fullName,
-        ],
-        webAuthenticationOptions: WebAuthenticationOptions(
-            clientId: 'de.lunaone.flutter.signinwithappleexample.service',
-            redirectUri: kIsWeb
-                ? Uri.parse('')
-                : Uri.parse(
-                    'https://flutter-sign-in-with-apple-example.glitch.me/callbacks/sign_in_with_apple',
-                  )),
-        nonce: 'example-nonce',
-        state: 'example-state',
-      );
-      final userCredential = await FirebaseAuth.instance.signInWithCredential(
-        OAuthCredential(
-          providerId: 'apple.com',
-          signInMethod: 'oauth',
-          accessToken: credential.identityToken,
-          idToken: credential.identityToken,
-          rawNonce: 'example-nonce', // Should be the same as nonce above
-        ),
-      );
+      final GoogleSignInAccount? getUser = await GoogleSignIn().signIn();
+      final GoogleSignInAuthentication getAuthen =
+          await getUser!.authentication;
+      final credential = GoogleAuthProvider.credential(
+          accessToken: getAuthen.accessToken, idToken: getAuthen.idToken);
+      await FirebaseAuth.instance.signInWithCredential(credential);
+      emit(const LoginState.success());
+    } catch (e) {
+      emit(LoginState.error(massege: tr('login.error_email')));
+    }
+    return null;
+  }
 
-      if (userCredential.user != null) {
+  // Future<UserCredential?> signInWithFacebook() async {
+  //   try {
+  //     emit(const LoginState.loading());
+  //     final LoginResult loginResult = await FacebookAuth.instance.login();
+  //     final OAuthCredential facebookAuthCredential =
+  //         FacebookAuthProvider.credential(loginResult.accessToken!.token);
+
+  //     FirebaseAuth.instance.signInWithCredential(facebookAuthCredential);
+  //     emit(const LoginState.success());
+  //   } catch (e) {
+  //     emit(LoginState.error(massege: tr('login.error_email')));
+  //   }
+  //   return null;
+  // }
+
+  Future<void> signInWithApple(BuildContext context) async {
+    try {
+      final authenService = AuthService();
+      final user = await authenService.signInWithApple(
+        scopes: [Scope.email, Scope.fullName],
+      );
+      if (user.email != null) {
         emit(const LoginState.success());
-      } else {
-        emit(LoginState.error(massege: tr('login.error_email')));
       }
     } catch (e) {
       emit(LoginState.error(massege: tr('login.error_email')));
     }
   }
 
-  Future<String?> resetPassword() async {
+  Future<void> resetPassword() async {
     try {
       emit(const LoginState.loading());
       if (StringHelper.isEmail(_email)) {
         await auth.sendPasswordResetEmail(
           email: _email.trim(),
         );
-        emit(const LoginState.success());
+        emit(const LoginState.fogotPassword());
+      } else {
+        emit(LoginState.error(massege: tr('login.error_email')));
       }
     } catch (e) {
       emit(LoginState.error(massege: tr('login.error_email')));
     }
-    return null;
   }
 }

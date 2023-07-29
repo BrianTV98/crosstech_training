@@ -1,4 +1,4 @@
-package com.example.cross_tech
+package com.kampvie.travel
 
 import io.flutter.embedding.android.FlutterActivity
 

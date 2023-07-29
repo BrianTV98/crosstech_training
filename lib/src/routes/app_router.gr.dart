@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const MainPage(),
       );
     },
+    PlanPageRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PlanPage(),
+      );
+    },
     LoginPageRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -45,12 +51,6 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ProfilePage(),
       );
     },
-    PlanPageRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const PlanPage(),
-      );
-    },
   };
 }
 
@@ -64,6 +64,20 @@ class MainPageRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MainPageRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PlanPage]
+class PlanPageRoute extends PageRouteInfo<void> {
+  const PlanPageRoute({List<PageRouteInfo>? children})
+      : super(
+          PlanPageRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PlanPageRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -120,20 +134,6 @@ class ProfilePageRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ProfilePageRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [PlanPage]
-class PlanPageRoute extends PageRouteInfo<void> {
-  const PlanPageRoute({List<PageRouteInfo>? children})
-      : super(
-          PlanPageRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'PlanPageRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -1,16 +1,46 @@
-# cross_tech
+## Generate
+### How to generate Icon App 
 
-A new Flutter project.
+```
+    flutter pub run flutter_launcher_icons:main
+```
 
-## Getting Started
+### Model, api retrofit
 
-This project is a starting point for a Flutter application.
+```
+    flutter pub run build_runner build
+```
 
-A few resources to get you started if this is your first Flutter project:
+### Delete conflicting outputs
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+    flutter packages pub run build_runner build --delete-conflicting-outputs
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+OR
+
+```
+      flutter packages pub run build_runner build -d
+```
+
+### Build filter (one directory special)
+
+*Example lib\123\file.dart
+
+```
+    flutter packages pub run build_runner build --build-filter="lib/123/**"
+```
+
+
+## Continue Deploy: firebase distribute 
+
+Android:- Development
+step 1: 
+run terminal 
+```
+   ./distribute.sh
+```
+
+- select 1:
+- select 1:
+- type change content:

@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,45 +49,21 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDqx8khH95tnQpz5WfTqTJQQzsPeLhH63I',
-    appId: '1:914199632725:web:00b0afbbb6e569d2f66ddc',
-    messagingSenderId: '914199632725',
-    projectId: 'crosstech-ef31d',
-    authDomain: 'crosstech-ef31d.firebaseapp.com',
-    databaseURL: 'https://crosstech-ef31d-default-rtdb.firebaseio.com',
-    storageBucket: 'crosstech-ef31d.appspot.com',
-    measurementId: 'G-2NFHJQWL1Y',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDdoj93qCIy7SDVEyKUTjv_g4KwnVxeF9I',
-    appId: '1:914199632725:android:be981d19c04451fff66ddc',
-    messagingSenderId: '914199632725',
-    projectId: 'crosstech-ef31d',
-    databaseURL: 'https://crosstech-ef31d-default-rtdb.firebaseio.com',
-    storageBucket: 'crosstech-ef31d.appspot.com',
+    apiKey: 'AIzaSyCYc0l5QxNwRpDffrH5iAJ7OEcFHYwa86o',
+    appId: '1:176379158713:android:daecc9838fe00d08ae3b68',
+    messagingSenderId: '176379158713',
+    projectId: 'kampvie-61f4d',
+    storageBucket: 'kampvie-61f4d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAL75nPlN38VTBI6sIjxZHxEdNQdm_kZUY',
-    appId: '1:914199632725:ios:3e902eb92246d8eaf66ddc',
-    messagingSenderId: '914199632725',
-    projectId: 'crosstech-ef31d',
-    databaseURL: 'https://crosstech-ef31d-default-rtdb.firebaseio.com',
-    storageBucket: 'crosstech-ef31d.appspot.com',
-    iosClientId: '914199632725-0hv4b1656ik13gc4l951qmrnvb21dfnf.apps.googleusercontent.com',
-    iosBundleId: 'com.example.crossTech',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAL75nPlN38VTBI6sIjxZHxEdNQdm_kZUY',
-    appId: '1:914199632725:ios:c56bef1bd21e19a3f66ddc',
-    messagingSenderId: '914199632725',
-    projectId: 'crosstech-ef31d',
-    databaseURL: 'https://crosstech-ef31d-default-rtdb.firebaseio.com',
-    storageBucket: 'crosstech-ef31d.appspot.com',
-    iosClientId: '914199632725-3pork2sceeqevmi7t2i1nk4f15f8crnm.apps.googleusercontent.com',
-    iosBundleId: 'com.example.crossTech.RunnerTests',
+    apiKey: 'AIzaSyAiizIJYiYz3Lyp3RNwQXWrSql-grXVytE',
+    appId: '1:176379158713:ios:4b5754f6f4cfb86bae3b68',
+    messagingSenderId: '176379158713',
+    projectId: 'kampvie-61f4d',
+    storageBucket: 'kampvie-61f4d.appspot.com',
+    iosClientId: '176379158713-u36k3ugdak0nud1n2s6v32tm17qmtp8c.apps.googleusercontent.com',
+    iosBundleId: 'com.kampvie.traval',
   );
 }

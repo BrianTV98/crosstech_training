@@ -32,6 +32,6 @@ class AppRouter extends _$AppRouter {
               page: PlanPageRoute.page,
               path: RouteKey.calendaPage,
               children: [AutoRoute(page: PlanPageRoute.page)]),
-        ])
+        ]),
       ];
 }
