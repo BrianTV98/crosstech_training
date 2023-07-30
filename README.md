@@ -1,3 +1,6 @@
+# Dev Document 
+Mindset: go to screen for tree:
+
 ## Generate
 ### How to generate Icon App 
 
