@@ -1,13 +1,11 @@
 import 'package:cross_tech/src/core/extension/build_context_extension.dart';
-import 'package:cross_tech/src/extension/build_context_extension.dart';
+
 import 'package:cross_tech/src/feature/auth/presentation/component/chose_login.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import '../../../../blocs/login/login_cubit.dart';
-import '../../../../constances/assets_path.dart';
-import '../blocs/login/login_cubit.dart';
-import '../commonts/app_colors.dart';
-import '../constances/assets_path.dart';
+
+import '../../../../core/commonts/app_colors.dart';
+import '../../../../core/constances/assets_path.dart';
 import 'text_form_field_login.dart';
 
 class ForgotPassword extends StatefulWidget {

@@ -3,10 +3,8 @@ import 'package:universal_html/html.dart' as html;
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-import '../app_dependencies.dart';
-import '../commonts/logger_utils.dart';
 
-import '../routes/app_router.dart';
+import '../commonts/logger_utils.dart';
 
 class NetworkHelper {
   static bool networkAvailable = false;
