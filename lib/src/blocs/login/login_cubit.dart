@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:the_apple_sign_in/scope.dart';
 import 'package:the_apple_sign_in/the_apple_sign_in.dart';
@@ -13,6 +12,7 @@ import 'login_state.dart';
 class LoginCubit extends BaseCubit<LoginState> {
   LoginCubit() : super(const LoginState.initial());
   FirebaseAuth auth = FirebaseAuth.instance;
+  final AuthService _authService = AuthService();
   String _email = '';
   String _password = '';
   String _confirmPassword = '';
@@ -104,15 +104,12 @@ class LoginCubit extends BaseCubit<LoginState> {
   //   return null;
   // }
 
-  Future<void> signInWithApple(BuildContext context) async {
+  Future<void> signInWithApple() async {
     try {
-      final authenService = AuthService();
-      final user = await authenService.signInWithApple(
+      await _authService.signInWithApple(
         scopes: [Scope.email, Scope.fullName],
       );
-      if (user.email != null) {
-        emit(const LoginState.success());
-      }
+      emit(const LoginState.success());
     } catch (e) {
       emit(LoginState.error(massege: tr('login.error_email')));
     }

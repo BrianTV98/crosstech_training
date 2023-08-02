@@ -2,7 +2,7 @@ import 'package:cross_tech/src/commonts/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../model/bottom_bar/bottom_bar_item.dart';
+import '../../model/views/bottom_bar/bottom_bar_item.dart';
 
 class CustomBottomNavigatorBar extends StatefulWidget {
   final Widget child;
